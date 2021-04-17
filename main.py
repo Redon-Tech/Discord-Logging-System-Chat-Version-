@@ -13,7 +13,7 @@ async def index():
 		"message" : "Ok"
 	}
 
-@app.route("/v1/send/<channel_id>", methods=["POST"])
+@app.route("/v1/send/<channel_id>", methods=["POST"]) # Still WIP
 async def send_message(channel_id):
 	try:
 		messages = (await request.get_json())["messages"]
