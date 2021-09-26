@@ -56,7 +56,7 @@ async def send_message():
 
 		embed.set_footer(text="Made By: Redon Tech")
 		for x in messages:
-			data = x.split(":")
+			data = x.split(":", 1)
 			embed.add_field(name=data[0], value=data[1], inline=False)
 
 		await channel.send(embed=embed)
